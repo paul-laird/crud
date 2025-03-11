@@ -8,11 +8,13 @@ const users = [
     first_name: 'John',
     last_name: 'Doe',
     email: 'johndoe@example.com',
+    id:'900b5a10-a4e1-4682-8fc8-89ea05863bfe'
   },
   {
     first_name: 'Alice',
     last_name: 'Smith',
     email: 'alicesmith@example.com',
+    id:'900b5a10-a4e1-4682-8fc8-89ea05863bfd'
   },
 ];
 
@@ -36,5 +38,15 @@ router.post('/', (req, res) => {
 
     res.send(`${user.first_name} has been added to the Database`);
 })
+
+
+router.delete('/:id', (req, res) => {
+    const { id } = req.params;
+  
+    users = users.filter((user) => user.id !== id)
+  
+    res.send(`${id} deleted successfully from database`);
+  });
+
 
 export default router
