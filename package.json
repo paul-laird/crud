@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/paul-laird/crud/issues"
   },
-  "homepage": "https://github.com/paul-laird/crud#readme"
+  "homepage": "https://github.com/paul-laird/crud#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
